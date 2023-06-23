@@ -1,0 +1,34 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 907956360647-cvs48sllih3736uvq1c96hvkf8pgj3et.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+        provider:
+          google:
+            user-name-attribute: sub
+
+jwt:
+  issuer: laykim@naver.com
+  secret_key: spaceX
+
+
+
+
